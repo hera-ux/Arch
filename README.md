@@ -1,70 +1,37 @@
 # MR PURFRD
 
-> Instalador avanzado de Arch Linux con personalización extrema.
+> Instalador automatizado de Arch Linux con alto nivel de personalización.
 
-MR PURFRD es un instalador automatizado para Arch Linux que permite construir un sistema completamente personalizado, desde el particionado hasta el entorno gráfico y drivers.
-
-Diseñado para usuarios que quieren la libertad de Arch Linux sin repetir manualmente todo el proceso de instalación.
+MR PURFRD es un script de instalación para Arch Linux que automatiza el proceso completo de instalación permitiendo elegir drivers, paquetes, entorno gráfico y herramientas adicionales.
 
 ---
 
 # ✨ Características
 
-## 🧱 Instalación completa automatizada
-
 - Particionado automático GPT
-- Configuración UEFI
-- Swap automática
+- Configuración UEFI con GRUB
 - Instalación base de Arch Linux
+- Configuración de swap
 - Configuración regional en español
-- Configuración de usuarios
+- Creación de usuario y contraseña
 - Configuración de sudo
-
----
-
-# 🐧 Kernels soportados
-
-Actualmente:
-
-- linux
-- linux-lts *(próximamente)*
-- linux-zen *(próximamente)*
-- linux-hardened *(próximamente)*
-
----
-
-# 🎮 Drivers soportados
-
-## NVIDIA
-
-- Drivers modernos
-- NVIDIA 470xx
-- NVIDIA 390xx
-
-## AMD
-
-- Mesa
-- Vulkan
-- OpenCL
-- VA-API
-
-## Configuración híbrida
-
-- NVIDIA + AMD
+- Activación de multilib
+- Instalación automática de drivers
+- Instalación de entornos gráficos
+- Instalación de paquetes opcionales
+- Instalación de yay (AUR helper)
+- Instalación opcional de Wine y Proton
 
 ---
 
 # 🖥️ Entornos gráficos soportados
 
-## Entornos ligeros
+## Entornos de escritorio
 
 - LXDE
 - LXQt
 - XFCE
 - MATE
-
-## Entornos completos
-
 - GNOME
 - KDE Plasma
 - Cinnamon
@@ -86,45 +53,59 @@ Actualmente:
 
 ---
 
-# 📦 Paquetes opcionales
+# 🎮 Drivers soportados
 
-El instalador permite seleccionar categorías completas:
+## NVIDIA
 
-- Desarrollo
-- Navegadores
-- Multimedia
-- Audio PipeWire
-- Herramientas de red
-- Compresión
-- Bluetooth
-- Utilidades del sistema
-- Fonts
-- Gaming
+- Drivers modernos
+- NVIDIA 470xx
+- NVIDIA 390xx
+
+## AMD
+
+- Mesa
+- Vulkan Radeon
+- OpenCL Mesa
 
 ---
 
-# 🎮 Gaming Ready
+# 📦 Paquetes opcionales
 
-Soporte integrado para:
+El instalador permite instalar:
+
+- Herramientas de desarrollo
+- Chromium
+- Utilidades de discos
+- Fastfetch
+- Fonts
+- Audio y multimedia
+- Herramientas de compresión
+- Utilidades de red
+- Herramientas del sistema
+
+---
+
+# 🎮 Gaming
+
+Instalación opcional de:
 
 - Steam
 - Proton
-- Wine
+- Wine Staging
 - Lutris
 - Gamescope
 - Gamemode
 
 ---
 
-# 🔧 Tecnologías incluidas
+# 🔧 Componentes instalados
 
 - GRUB
 - PipeWire
 - NetworkManager
-- Yay (AUR helper)
-- Multilib
-- Vulkan
-- OpenCL
+- Yay
+- sudo
+- nano
 
 ---
 
@@ -132,6 +113,7 @@ Soporte integrado para:
 
 ```bash
 git clone https://github.com/usuario/mr-purfrd.git
+
 cd mr-purfrd
 
 chmod +x install.sh
@@ -141,54 +123,12 @@ sudo ./install.sh
 
 ---
 
-# ⚠️ Advertencias
+# ⚠️ Advertencia
 
-- Este instalador BORRA completamente el disco seleccionado.
-- Pensado para sistemas UEFI.
-- Uso recomendado en hardware x86_64.
-- Algunas opciones Wayland requieren configuración manual posterior.
-
----
-
-# 📂 Estructura del proyecto
-
-```text
-mr-purfrd/
-├── install.sh
-├── README.md
-└── assets/
-```
-
----
-
-# 🛣️ Roadmap
-
-- [ ] Soporte Btrfs
-- [ ] Snapshots automáticos
-- [ ] Cifrado LUKS
-- [ ] Soporte dual boot
-- [ ] Interfaz TUI avanzada
-- [ ] Configuración modular
-- [ ] Perfiles preconfigurados
-- [ ] Soporte automático para laptops
-
----
-
-# ❤️ Filosofía
-
-MR PURFRD busca combinar:
-
-- La simplicidad de un instalador moderno
-- La libertad total de Arch Linux
-- La personalización extrema
-- La velocidad de despliegue
+Este script elimina completamente el disco seleccionado durante el particionado.
 
 ---
 
 # 📜 Licencia
 
 MIT License
-
----
-
-# 🐧 Arch Linux, pero a tu manera.
